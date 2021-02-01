@@ -34,9 +34,9 @@ body{
     display: flex;
     align-items: center;
     width: 100%;
-    min-height: 80px;
+    height: 80px;
     background-color:#eaeaea;
-    padding: 10px;
+
 }
 
 .container-avatar{
@@ -44,6 +44,13 @@ body{
     width: 66%;
     align-items: center;
     cursor: pointer;
+    padding: 10px;
+}
+
+.container-avatar img{
+    width: 20%;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .box-user-icons{
@@ -57,16 +64,30 @@ body{
     cursor: pointer;
 }
 
-.container-avatar img{
-    width: 20%;
+.box-alert{
+    background-color: #fff;
+    color: #8edafc;
+    padding: 15px;
     border-radius: 50%;
-    margin-right: 10px;
+    font-size: 1.4em;
+    margin-left: 20px;
 }
 
 .box-notifications{
+    display: flex;
+    align-items: center;
     width: 100%;
     height: 90px;
     background-color: #8edafc;
+}
+
+.box-notifications a {
+    letter-spacing: 0.5px;
+    color: #578194;
+}
+
+.box-notifications-info{
+    margin-left: 10px;
 }
 
 .box-search{
