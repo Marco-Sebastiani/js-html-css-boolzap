@@ -4,3 +4,18 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom,#009688 0px, #009688 12%, #ddd5d1 12%, #d2dbdc 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    margin: auto;
+    width: 80%;
+    min-width: 960px;
+    height: 95%;
+    background-color: rgba(153, 152, 155, 0.849);
+}
