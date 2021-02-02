@@ -167,7 +167,7 @@ body{
 .right-box .box-avatar-info{
     display: flex;
     align-items: center;
-    width: 85%;
+    width: 80%;
 }
 
 .right-box .box-avatar-info img{
@@ -182,7 +182,7 @@ body{
 
 .right-box .box-info-icons{
     display: flex;
-    width: 15%;
+    width: 20%;
     height: 100%;
     justify-content: center;
     align-items: center;
@@ -196,14 +196,50 @@ body{
 .right-box .box-chat-message-container{
     width: 100%;
     height: calc(100% - 70px - 70px);
-}
-
-.right-box .box-chat-message{
-    width: 100%;
-    height: 100%;
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
 }
+
+.right-box .box-chat-message{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+}
+
+.right-box .box-chat-message .square-message{
+    position: relative;
+    width: 40%;
+    margin: 15px 0;
+    font-weight: 400;
+    font-size: 1.1em;
+    padding: 17px 15px 20px 15px;
+    border-radius: 10px;
+}
+
+.right-box .box-chat-message .square-message.sent{
+    background-color: #d5f9ba;
+    float: right;
+    clear: both;
+}
+
+.right-box .box-chat-message .square-message.received{
+    background-color: white;
+    float: left;
+    clear: both;
+}
+
+.right-box .box-chat-message .square-message .data{
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+    padding: 3px;
+    font-size: 0.7em;
+    text-align: right;
+}
+
+
+
+
 
 .right-box .box-input-message{
     display: flex;
