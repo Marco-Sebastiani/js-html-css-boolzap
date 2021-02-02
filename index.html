@@ -19,7 +19,7 @@
             <div class="box-header-left">
                 <!-- AVATAR PROFILO UTENTE -->
                 <div class="container-avatar" v-for="(utente,index) in contacts" v-if="utente.name == 'Marco Sebastiani'" >
-                    <img :src="utente.avatar" alt="avatar">
+                    <img :src="utente.avatar" :alt="utente.title">
                     <h4>{{utente.name}}</h4>
                 </div>
                 <!-- / AVATAR PROFILO UTENTE -->
@@ -62,15 +62,9 @@
             <!-- BOX CHAT -->
             <div class="box-chat-list">
                 <div class="box-message border-white" v-for="(utente,index) in contacts">
-                    <img :src="utente.avatar" alt="">
+                    <img :src="utente.avatar" :alt="utente.title">
                     <h4>{{ utente.name }}</h4> 
                 </div>
-                <!-- 
-
-                <div class="box-message border-white">
-                    <img src="img/avatar_5.jpg" alt="">
-                    <h4>Lorenzo</h4> 
-                </div> -->
             </div>
             <!-- / BOX CHAT -->
         </div>
