@@ -61,7 +61,7 @@
 
             <!-- BOX CHAT -->
             <div class="box-chat-list">
-                <div class="box-message border-white" v-for="(utente,index) in contacts">
+                <div class="box-message border-white" v-for="(utente,index) in contacts" @click="statusActive(index)">
                     <img :src="utente.avatar" :alt="utente.title">
                     <h4>{{ utente.name }}</h4> 
                 </div>
@@ -75,10 +75,10 @@
                 <!-- BOX HEADER RIGHT -->
                 <div class="box-header-right">
                     <div class="box-avatar-info">
-                        <img src="img/avatar_5.jpg" alt="avatar">
+                        <img :src="active.avatar" :alt="active.title">
                         <div class="box-title">
-                            <h3>Lorenzo</h3>
-                            <p class="mcs_grey">Ultimo accesso oggi alle</p>
+                            <h3>{{ active.name }}</h3>
+                            <p class="mcs_grey" v-if="active.name != '' ">Ultimo accesso oggi alle</p>
                         </div>
                     </div>
 

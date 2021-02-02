@@ -48,6 +48,17 @@ var app = new Vue({
                 title: 'account-user'
             }
 
-        ]
+        ],
+        active: {
+            name:'',
+            avatar:'',
+            title:''
+        }
+    },
+    methods:{
+        statusActive(i){
+            this.active.name = this.contacts[i].name;
+            this.active.avatar = this.contacts[i].avatar;this.active.title = this.contacts[i].title;
+        }
     }
 });

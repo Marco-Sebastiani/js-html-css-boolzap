@@ -16,7 +16,7 @@ body{
 .container{
     display: flex;
     margin: auto;
-    width: 90%;
+    width: 85%;
     min-width: 960px;
     height: 95%;
     background-color: rgba(173, 172, 172, 0.603);
