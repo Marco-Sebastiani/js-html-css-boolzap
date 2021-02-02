@@ -49,16 +49,11 @@ var app = new Vue({
             }
 
         ],
-        active: {
-            name:'',
-            avatar:'',
-            title:''
-        }
+        chatAttuale:0,
     },
     methods:{
         statusActive(i){
-            this.active.name = this.contacts[i].name;
-            this.active.avatar = this.contacts[i].avatar;this.active.title = this.contacts[i].title;
+            this.chatAttuale= i;
         }
     }
 });

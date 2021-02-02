@@ -30,6 +30,32 @@ body{
     color: rgb(185, 181, 181)
 }
 
+.box-chat-list::-webkit-scrollbar-track,
+.box-chat-message-container::-webkit-scrollbar-track {
+    background: rgb(185, 181, 181);
+    border:1px solid rgba(255, 255, 255, 0.1);
+    border-radius:10px;
+    
+}
+.box-chat-list::-webkit-scrollbar-thumb,
+.box-chat-message-container::-webkit-scrollbar-thumb {
+    background: rgb(5, 139, 99) ;
+    height:70px;
+    border-radius:10px;
+}
+.box-chat-list::-webkit-scrollbar-thumb:hover,
+.box-chat-message-container::-webkit-scrollbar-thumb:hover {
+    background: #3D3D3D;
+}
+
+.box-chat-list::-webkit-scrollbar,
+.box-chat-message-container::-webkit-scrollbar{
+    width: 5px;
+    height: 4px;
+
+}
+
+
 /******BOX-LEFT******/
 
 .left-box{
@@ -278,15 +304,5 @@ body{
 }
 
 
-/* .classechescrolla::-webkit-scrollbar-track {
-    background: var(--colore1);
-    border-left:1px solid rgba(255, 255, 255, 0.1);
-}
-.classechescrolla::-webkit-scrollbar-thumb {
-    background:var(--fontcolorint);
-    height:100px;
-    border-radius:0px;
-}
-.classechescrolla::-webkit-scrollbar-thumb:hover {
-    background: #3D3D3D;
-} */
+
+
