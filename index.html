@@ -61,11 +61,11 @@
 
             <!-- BOX CHAT -->
             <div class="box-chat-list">
-                <div class="box-message border-white">
-                    <img src="img/avatar_1.jpg" alt="">
-                    <h4>Michele</h4> 
+                <div class="box-message border-white" v-for="(utente,index) in contacts">
+                    <img :src="utente.avatar" alt="">
+                    <h4>{{ utente.name }}</h4> 
                 </div>
-                <div class="box-message border-white">
+                <!-- <div class="box-message border-white">
                     <img src="img/avatar_3.jpg" alt="">
                     <h4>Fabio</h4> 
                 </div>
@@ -92,7 +92,7 @@
                 <div class="box-message border-white">
                     <img src="img/avatar_5.jpg" alt="">
                     <h4>Lorenzo</h4> 
-                </div>
+                </div> -->
             </div>
             <!-- / BOX CHAT -->
         </div>
@@ -169,5 +169,6 @@
         <!-- /BLOCCO DI DESTRA -->
 
     </div>
+    <script src="vue/script.js"></script>
 </body>
 </html>
