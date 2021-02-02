@@ -127,7 +127,7 @@ body{
 
 .left-box .box-chat-list{
     width: 100%;
-    height: calc(100% - 50px - 80px - 70px);
+    height: calc(100% - 200px);
     background-color: #fff;
     overflow-y: auto;
 }
@@ -195,7 +195,7 @@ body{
 
 .right-box .box-chat-message-container{
     width: 100%;
-    height: calc(100% - 70px - 70px);
+    height: calc(100% - 140px);
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
 }
@@ -209,10 +209,13 @@ body{
 .right-box .box-chat-message .square-message{
     position: relative;
     margin: 15px 0;
+    min-width: 40%;
+    max-width: 60%;
     font-weight: 400;
     font-size: 1.1em;
     padding: 17px 15px 20px 15px;
     border-radius: 10px;
+    word-break: break-all; 
 }
 
 .right-box .box-chat-message .square-message.sent{

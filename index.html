@@ -18,9 +18,9 @@
             <!-- BOX PROFILO UTENTE -->
             <div class="box-header-left">
                 <!-- AVATAR PROFILO UTENTE -->
-                <div class="container-avatar">
-                    <img src="img/avatar_3.jpg" alt="avatar">
-                    <h4>Marco Sebastiani</h4>
+                <div class="container-avatar" v-for="(utente,index) in contacts" v-if="utente.name == 'Marco Sebastiani'" >
+                    <img :src="utente.avatar" alt="avatar">
+                    <h4>{{utente.name}}</h4>
                 </div>
                 <!-- / AVATAR PROFILO UTENTE -->
 
@@ -65,30 +65,8 @@
                     <img :src="utente.avatar" alt="">
                     <h4>{{ utente.name }}</h4> 
                 </div>
-                <!-- <div class="box-message border-white">
-                    <img src="img/avatar_3.jpg" alt="">
-                    <h4>Fabio</h4> 
-                </div>
-                <div class="box-message border-white">
-                    <img src="img/avatar_2.jpg" alt="">
-                    <h4>Mario</h4> 
-                </div>
-                <div class="box-message border-white">
-                    <img src="img/avatar_4.jpg" alt="">
-                    <h4>Samuele</h4> 
-                </div>
-                <div class="box-message border-white">
-                    <img src="img/avatar_io.jpg" alt="">
-                    <h4>Giulia</h4> 
-                </div>
-                <div class="box-message border-white">
-                    <img src="img/avatar_5.jpg" alt="">
-                    <h4>Lorenzo</h4> 
-                </div>
-                <div class="box-message border-white">
-                    <img src="img/avatar_5.jpg" alt="">
-                    <h4>Lorenzo</h4> 
-                </div>
+                <!-- 
+
                 <div class="box-message border-white">
                     <img src="img/avatar_5.jpg" alt="">
                     <h4>Lorenzo</h4> 

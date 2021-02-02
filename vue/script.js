@@ -17,6 +17,26 @@ var app = new Vue({
             {
                 name:'Samuele',
                 avatar:'img/avatar_4.jpg'
+            },
+            {
+                name:'Giulia',
+                avatar:'img/avatar_io.jpg'
+            },
+            {
+                name:'Lorenzo',
+                avatar:'img/avatar_5.jpg'
+            },
+            {
+                name:'Luca',
+                avatar:'img/avatar_7.jpg'
+            },
+            {
+                name:'Giovanni',
+                avatar:'img/avatar_8.jpg'
+            },
+            {
+                name:'Marco Sebastiani',
+                avatar:'img/avatar_3.jpg'
             }
 
         ]
