@@ -241,7 +241,7 @@ body{
     font-size: 1.1em;
     padding: 17px 15px 20px 15px;
     border-radius: 10px;
-    word-break: break-all; 
+    word-break: break-word; 
 }
 
 .right-box .box-chat-message .square-message.sent{
@@ -255,6 +255,22 @@ body{
     float: left;
     clear: both;
 }
+
+.right-box .box-chat-message .square-message p{
+    margin-right: 20px;
+}
+
+.right-box .box-chat-message .square-message .arrow{
+    position: absolute;
+    color: rgba(168, 166, 166, 0.685);
+    font-size: 0.9em;
+    right: 13px;
+    top: 10px;
+    /* top: 50%;
+    transform: translatey(-50%); */
+    cursor: pointer;
+}
+
 
 .right-box .box-chat-message .square-message .data{
     position: absolute;

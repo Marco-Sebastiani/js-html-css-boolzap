@@ -14,7 +14,7 @@ var app = new Vue({
                     },
                     {
                         date: '10/01/2021 15:50:00',
-                        text: 'Ricordati di dargli da mangiare',
+                        text: 'Ricordati di dargli da mangiare.',
                         status: 'sent'
                     },
                     {
@@ -146,12 +146,12 @@ var app = new Vue({
                     },
                     {
                         date: '10/02/2021 16:30:55',
-                        text: 'Ci siamo conosciuti a teatro ricordi ?',
+                        text: 'Ci siamo conosciuti a teatro, ricordi ?',
                         status: 'received'
                     },
                     {
                         date: '10/02/2021 16:35:00',
-                        text: 'AH si giusto, come va ?',
+                        text: 'Ah si giusto, come va ?',
                         status: 'sent'
                     }
                 ],
