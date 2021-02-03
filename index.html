@@ -93,30 +93,12 @@
                 <!-- BOX CHAT -->
                 <div class="box-chat-message-container">
                     <div class="box-chat-message">
-                        <div class="square-message" v-for="message in contacts" :class="">
-                            <p></p>
+                        <div class="square-message" v-for="(message) in contacts[chatAttuale].messages" :class="{sent:message.status == 'sent', received:message.status == 'received'}">
+                            <p>{{ message.text}}</p>
                             <div class="data mcs_grey">
-                                <small>02/02/2021</small>
+                                <small>{{message.date}}</small>
                             </div>
                         </div>
-                        <!-- <div class="square-message sent">
-                            <p>Ciao come staiddddddddddddddd ?</p>
-                            <div class="data mcs_grey">
-                                <small>02/02/2021</small>
-                            </div>
-                        </div>
-                        <div class="square-message received">
-                            <p>Ciao come staiddddddddddddddd ?</p>
-                            <div class="data mcs_grey">
-                                <small>02/02/2021</small>
-                            </div>
-                        </div>
-                        <div class="square-message received">
-                            <p>Ciao come staiddddddddddddddd ?</p>
-                            <div class="data mcs_grey">
-                                <small>02/02/2021</small>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <!-- / BOX CHAT -->

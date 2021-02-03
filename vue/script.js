@@ -58,7 +58,7 @@ var app = new Vue({
                     },
                     {
                         date: '20/01/2021 16:30:55',
-                        text: 'Bene grazie! Stasera psartita a calcietto ?',
+                        text: 'Bene grazie! Stasera partita a calcietto ?',
                         status: 'received'
                     },
                     {
@@ -75,7 +75,7 @@ var app = new Vue({
                 messages: [
                     {
                         date: '02/02/2021 16:30:00',
-                        text: 'Ciao posso avere informazioni sul Programma di formazione ?',
+                        text: 'Ciao posso avere informazioni sulla vostra formazione ?',
                         status: 'sent'
                     },
                     {
@@ -107,7 +107,7 @@ var app = new Vue({
                     },
                     {
                         date: '02/01/2021 16:35:00',
-                        text: 'Mi piacerebbe risentirci, a presto.',
+                        text: 'Mi ha fatto piacere risentirci, a presto.',
                         status: 'sent'
                     }
                 ],
