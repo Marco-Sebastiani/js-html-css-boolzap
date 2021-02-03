@@ -94,7 +94,8 @@
                 <div class="box-chat-message-container">
                     <div class="box-chat-message">
                         <div class="square-message" v-for="(message) in contacts[chatAttuale].messages" :class="{sent:message.status == 'sent', received:message.status == 'received'}">
-                            <p>{{ message.text}} <i class="fas fa-chevron-down arrow"></i></p>
+                            <p>{{ message.text}}</p>
+                            <i class="fas fa-chevron-down arrow"></i>
                             <div class="data mcs_grey">
                                 <small>{{message.date}}</small>
                             </div>
