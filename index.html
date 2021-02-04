@@ -62,7 +62,7 @@
 
             <!-- BOX CHAT -->
             <div class="box-chat-list">
-                <div class="box-message border-white" v-if="utente.name != 'Marco Sebastiani'" v-for="(utente,index) in contacts" @click="statusActive(index)">
+                <div class="box-message border-white" v-if="utente.name != 'Marco Sebastiani'" v-for="(utente,index) in contacts" @click="statusActive(index)" :class='(index == chatAttuale) ? "active" : ""'>
                     <img :src="utente.avatar" :alt="utente.title">
                     <h4>{{ utente.name }}</h4> 
                 </div>

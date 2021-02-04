@@ -186,12 +186,18 @@ var app = new Vue({
 
         ],
         chatAttuale:0,
+        time: '',
         newMex: '',
         newMexFinal: {
             date: '',
             text: '',
             status: 'sent'
         },
+        newMexReceived: {
+            date: '',
+            text: 'Ok',
+            status: 'received'
+        }
     },
     methods:{
         statusActive(i){
@@ -201,8 +207,17 @@ var app = new Vue({
         sentMessage(){
             this.newMexFinal.text = this.newMex;
             this.contacts[this.chatAttuale].messages.push(this.newMexFinal);
+            this.newMex = '';
             this.newMexFinal.date = moment().format('L LTS');
+            this.time = setTimeout(this.receivedMex, 2000);
+        },
+
+        receivedMex(){
+            this.newMexReceived.date = moment().format('L LTS');
+            this.contacts[this.chatAttuale].messages.push(this.newMexReceived);
         }
+
 
     }
 });
+

@@ -168,6 +168,11 @@ body{
     background-color: #c6d2d89c ;
 }
 
+.left-box .box-chat-list .box-message.active{
+    background-color: #c6d2d886 ;
+
+}
+
 .left-box .box-chat-list .box-message img{
     width: 15%;
     border-radius: 50%;
