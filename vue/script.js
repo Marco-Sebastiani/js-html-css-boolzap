@@ -1,10 +1,17 @@
 var app = new Vue({
     el:'#app',
     data:{
+        user: 
+            {
+                name:'Marco Sebastiani',
+                avatar:'img/avatar_3.jpg',
+                title: 'account-user'
+            },
         contacts:[
             {
                 name:'Michele',
                 avatar:'img/avatar_1.jpg',
+                visible: true,
                 title: 'avatar_1',
                 messages: [
                     {
@@ -27,6 +34,7 @@ var app = new Vue({
             {
                 name:'Fabio',
                 avatar:'img/avatar_3.jpg',
+                visible: true,
                 title: 'avatar_3',
                 messages: [
                     {
@@ -49,6 +57,7 @@ var app = new Vue({
             {
                 name:'Mario',
                 avatar:'img/avatar_2.jpg',
+                visible: true,
                 title: 'avatar_2',
                 messages: [
                     {
@@ -71,6 +80,7 @@ var app = new Vue({
             {
                 name:'Samuele',
                 avatar:'img/avatar_4.jpg',
+                visible: true,
                 title: 'avatar_4',
                 messages: [
                     {
@@ -93,6 +103,7 @@ var app = new Vue({
             {
                 name:'Giulia',
                 avatar:'img/avatar_io.jpg',
+                visible: true,
                 title: 'avatar_io',
                 messages: [
                     {
@@ -115,6 +126,7 @@ var app = new Vue({
             {
                 name:'Lorenzo',
                 avatar:'img/avatar_5.jpg',
+                visible: true,
                 title: 'avatar_5',
                 messages: [
                     {
@@ -137,6 +149,7 @@ var app = new Vue({
             {
                 name:'Luca',
                 avatar:'img/avatar_7.jpg',
+                visible: true,
                 title: 'avatar_7',
                 messages: [
                     {
@@ -159,6 +172,7 @@ var app = new Vue({
             {
                 name:'Giovanni',
                 avatar:'img/avatar_8.jpg',
+                visible: true,
                 title: 'avatar_8',
                 messages: [
                     {
@@ -177,17 +191,13 @@ var app = new Vue({
                         status: 'sent'
                     }
                 ],
-            },
-            {
-                name:'Marco Sebastiani',
-                avatar:'img/avatar_3.jpg',
-                title: 'account-user'
             }
 
         ],
         chatAttuale:0,
         time: '',
         newMex: '',
+        inputSearch: '',
         newMexFinal: {
             date: '',
             text: '',
@@ -215,9 +225,23 @@ var app = new Vue({
         receivedMex(){
             this.newMexReceived.date = moment().format('L LTS');
             this.contacts[this.chatAttuale].messages.push(this.newMexReceived);
+        },
+
+        searchFilter(){
+            console.log('ciao');
+            this.contacts.forEach((element) => {
+                let nome = element.name;
+                inputInserito = this.inputSearch.toLowerCase();
+                nome = nome.toLowerCase();
+                if (nome.includes(inputInserito)) {
+                    element.visible = true;
+                } else {
+                    element.visible = false;
+                    console.log('ciao');
+                }
+            });
+
         }
-
-
     }
 });
 

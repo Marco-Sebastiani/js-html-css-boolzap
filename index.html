@@ -19,9 +19,9 @@
             <!-- BOX PROFILO UTENTE -->
             <div class="box-header-left">
                 <!-- AVATAR PROFILO UTENTE -->
-                <div class="container-avatar" v-for="(utente,index) in contacts" v-if="utente.name == 'Marco Sebastiani'" >
-                    <img :src="utente.avatar" :alt="utente.title">
-                    <h4>{{utente.name}}</h4>
+                <div class="container-avatar">
+                    <img :src="user.avatar" :alt="user.title">
+                    <h4>{{user.name}}</h4>
                 </div>
                 <!-- / AVATAR PROFILO UTENTE -->
 
@@ -54,7 +54,7 @@
             <div class="box-search">
                 <div class="box-input-search">
                     <i class="fas fa-search mcs_grey">
-                        <input type="text" placeholder="Cerca o inizia una nuova chat" name="" id="">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" name="" v-model='inputSearch' @keyup='searchFilter'>
                     </i>
                 </div>
             </div>
@@ -62,7 +62,7 @@
 
             <!-- BOX CHAT -->
             <div class="box-chat-list">
-                <div class="box-message border-white" v-if="utente.name != 'Marco Sebastiani'" v-for="(utente,index) in contacts" @click="statusActive(index)" :class='(index == chatAttuale) ? "active" : ""'>
+                <div class="box-message border-white"  v-for="(utente,index) in contacts" @click="statusActive(index)" :class='(index == chatAttuale) ? "active" : ""' v-if="utente.visible">
                     <img :src="utente.avatar" :alt="utente.title">
                     <h4>{{ utente.name }}</h4> 
                 </div>
