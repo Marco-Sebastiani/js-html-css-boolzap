@@ -186,10 +186,23 @@ var app = new Vue({
 
         ],
         chatAttuale:0,
+        newMex: '',
+        newMexFinal: {
+            date: '',
+            text: '',
+            status: 'sent'
+        },
     },
     methods:{
         statusActive(i){
             this.chatAttuale= i;
+        },
+
+        sentMessage(){
+            this.newMexFinal.text = this.newMex;
+            this.contacts[this.chatAttuale].messages.push(this.newMexFinal);
+            this.newMexFinal.date = moment().format('L LTS');
         }
+
     }
 });
