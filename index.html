@@ -106,9 +106,13 @@
                 <!-- BOX CHAT -->
                 <div class="box-chat-message-container">
                     <div class="box-chat-message">
-                        <div class="square-message" v-for="(message) in contacts[chatAttuale].messages" :class="message.status">
+                        <div class="square-message" v-for="(message,index) in contacts[chatAttuale].messages" :class="message.status">
                             <p>{{ message.text}}</p>
                             <i class="fas fa-chevron-down arrow"></i>
+                            <!-- <div class="box-delet">
+                                <p>info messaggio</p>
+                                <p @click="deleteMsg(index)">elimina messaggio</p>
+                            </div> -->
                             <div class="data mcs_grey">
                                 <small>{{message.date}}</small>
                             </div>

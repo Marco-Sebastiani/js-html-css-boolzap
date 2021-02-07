@@ -238,7 +238,10 @@ var app = new Vue({
                     element.visible = false;
                 }
             });
-        }
+        },
+        // deleteMsg(index){
+        //     this.contacts[this.chatAttuale].messages.splice(index,1);
+        // }
     }
 });
 
