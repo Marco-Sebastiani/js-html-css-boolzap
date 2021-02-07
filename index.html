@@ -91,7 +91,7 @@
                         <img :src="contacts[chatAttuale].avatar" :alt="contacts[chatAttuale].title">
                         <div class="box-title">
                             <h3>{{ contacts[chatAttuale].name }}</h3>
-                            <p class="mcs_grey" >online</p>
+                            <p class="mcs_grey" >ultimo accesso {{ contacts[chatAttuale].messages[contacts[chatAttuale].messages.length - 1].date}}</p>
                         </div>
                     </div>
 
