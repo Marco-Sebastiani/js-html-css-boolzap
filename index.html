@@ -64,7 +64,19 @@
             <div class="box-chat-list">
                 <div class="box-message border-white"  v-for="(utente,index) in contacts" @click="statusActive(index)" :class='(index == chatAttuale) ? "active" : ""' v-if="utente.visible">
                     <img :src="utente.avatar" :alt="utente.title">
-                    <h4>{{ utente.name }}</h4> 
+                    <div class="box-info-msg">
+                        <h4>{{ utente.name }}</h4> 
+                        <p v-if="!utente.scripting">
+                            {{ utente.messages[utente.messages.length -1].text}}
+                        </p>
+                        <p v-else class="mcs_grey"> sta scrivendo...</p>
+                    </div>
+                    <small>
+                        {{ utente.messages[utente.messages.length -1].date }}
+                    </small>
+
+
+
                 </div>
             </div>
             <!-- / BOX CHAT -->
@@ -79,7 +91,7 @@
                         <img :src="contacts[chatAttuale].avatar" :alt="contacts[chatAttuale].title">
                         <div class="box-title">
                             <h3>{{ contacts[chatAttuale].name }}</h3>
-                            <p class="mcs_grey" v-if="contacts[chatAttuale].name != '' ">Ultimo accesso oggi alle</p>
+                            <p class="mcs_grey" >online</p>
                         </div>
                     </div>
 

@@ -195,6 +195,7 @@ var app = new Vue({
 
         ],
         chatAttuale:0,
+        scripting : false,
         time: '',
         newMex: '',
         inputSearch: '',
@@ -213,22 +214,20 @@ var app = new Vue({
         statusActive(i){
             this.chatAttuale= i;
         },
-
         sentMessage(){
             this.newMexFinal.text = this.newMex;
             this.contacts[this.chatAttuale].messages.push(this.newMexFinal);
             this.newMex = '';
             this.newMexFinal.date = moment().format('L LTS');
             this.time = setTimeout(this.receivedMex, 2000);
+            this.contacts[this.chatAttuale].scripting = true;
         },
-
         receivedMex(){
             this.newMexReceived.date = moment().format('L LTS');
             this.contacts[this.chatAttuale].messages.push(this.newMexReceived);
+            this.contacts[this.chatAttuale].scripting = false;
         },
-
         searchFilter(){
-            console.log('ciao');
             this.contacts.forEach((element) => {
                 let nome = element.name;
                 inputInserito = this.inputSearch.toLowerCase();
@@ -237,10 +236,8 @@ var app = new Vue({
                     element.visible = true;
                 } else {
                     element.visible = false;
-                    console.log('ciao');
                 }
             });
-
         }
     }
 });

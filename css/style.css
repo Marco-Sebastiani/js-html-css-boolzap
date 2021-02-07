@@ -164,6 +164,18 @@ body{
     cursor: pointer;
 }
 
+.left-box .box-chat-list .box-message .box-info-msg{
+    width: 70%;
+    line-height: 1.8;
+    font-size: 0.8em;
+}
+
+.left-box .box-chat-list .box-message small{
+    font-size: 0.5em;
+    width: 25%;
+    font-weight: bold;
+}
+
 .left-box .box-chat-list .box-message:hover{
     background-color: #c6d2d89c ;
 }
@@ -326,7 +338,3 @@ body{
     padding-left: 10px;
     outline: none;
 }
-
-
-
-
