@@ -199,6 +199,9 @@ var app = new Vue({
         time: '',
         newMex: '',
         inputSearch: '',
+        messageActive:{
+            index: false
+        },
         newMexFinal: {
             date: '',
             text: '',
@@ -239,9 +242,15 @@ var app = new Vue({
                 }
             });
         },
-        // deleteMsg(index){
-        //     this.contacts[this.chatAttuale].messages.splice(index,1);
-        // }
+        showOption(index){
+            this.messageActive.index = index;
+        },
+        deleteMsg(index){
+            this.contacts[this.chatAttuale].messages.splice(index,1);
+            if(!this.contacts[this.chatAttuale].messages.length){
+                this.contacts.splice(this.chatAttuale, 1)
+            }
+        }
     }
 });
 

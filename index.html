@@ -66,12 +66,12 @@
                     <img :src="utente.avatar" :alt="utente.title">
                     <div class="box-info-msg">
                         <h4>{{ utente.name }}</h4> 
-                        <p v-if="!utente.scripting">
-                            {{ utente.messages[utente.messages.length -1].text}}
+                        <p v-if="!utente.scripting && utente.messages.length > 0">
+                            {{ utente.messages[utente.messages.length -1].text }}
                         </p>
                         <p v-else class="mcs_grey"> sta scrivendo...</p>
                     </div>
-                    <small>
+                    <small v-if="utente.messages.length > 0">
                         {{ utente.messages[utente.messages.length -1].date }}
                     </small>
 
@@ -91,7 +91,7 @@
                         <img :src="contacts[chatAttuale].avatar" :alt="contacts[chatAttuale].title">
                         <div class="box-title">
                             <h3>{{ contacts[chatAttuale].name }}</h3>
-                            <p class="mcs_grey" >ultimo accesso {{ contacts[chatAttuale].messages[contacts[chatAttuale].messages.length - 1].date}}</p>
+                            <p v-if="contacts[chatAttuale].messages.length > 0" class="mcs_grey" >ultimo accesso {{ contacts[chatAttuale].messages[contacts[chatAttuale].messages.length - 1].date}}</p>
                         </div>
                     </div>
 
@@ -106,13 +106,13 @@
                 <!-- BOX CHAT -->
                 <div class="box-chat-message-container">
                     <div class="box-chat-message">
-                        <div class="square-message" v-for="(message,index) in contacts[chatAttuale].messages" :class="message.status">
+                        <div class="square-message" v-for="(message, index) in contacts[chatAttuale].messages" :class="message.status">
+                            <i class="fas fa-chevron-down arrow" @click="showOption(index)"></i>
                             <p>{{ message.text}}</p>
-                            <i class="fas fa-chevron-down arrow"></i>
-                            <!-- <div class="box-delet">
-                                <p>info messaggio</p>
-                                <p @click="deleteMsg(index)">elimina messaggio</p>
-                            </div> -->
+                            <div class="box-delet" v-if="messageActive.index === index">
+                                <div>info messaggio</div>
+                                <div @click="deleteMsg(index)">elimina messaggio</div>
+                            </div>
                             <div class="data mcs_grey">
                                 <small>{{message.date}}</small>
                             </div>

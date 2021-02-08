@@ -340,19 +340,31 @@ body{
 }
 
 
-/* .box-delet{
+.box-delet{
     position: absolute;
-    top: 97%;
-    left: 53%;
-    width: 47%;
+    top: 98%;
+    left: 55%;
+    width: 45%;
     padding: 8px;
     text-align: center;
     background-color: #fff;
-    line-height: 1.6;
+    line-height: 2.1;
     text-transform: uppercase;
     font-size: 0.7em;
     border-radius: 3px;
     box-shadow: 0px 3px 8px 3px rgb(0 0 0 / 20%);
     z-index: 10;
     cursor: pointer;
-} */
+}
+
+.box-delet div:hover{
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
+.show{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
