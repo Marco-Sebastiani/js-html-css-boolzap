@@ -107,9 +107,9 @@
                 <div class="box-chat-message-container">
                     <div class="box-chat-message">
                         <div class="square-message" v-for="(message, index) in contacts[chatAttuale].messages" :class="message.status">
-                            <i class="fas fa-chevron-down arrow" @click="showOption(index)"></i>
+                            <i class="fas fa-chevron-down arrow" @click='showOption(index)' ></i>
                             <p>{{ message.text}}</p>
-                            <div class="box-delet" v-if="messageActive.index === index">
+                            <div class="box-delet" :class='(index == messageActive) ? "show" : "hidden"'>
                                 <div>info messaggio</div>
                                 <div @click="deleteMsg(index)">elimina messaggio</div>
                             </div>

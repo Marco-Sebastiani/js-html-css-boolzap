@@ -101,7 +101,7 @@ var app = new Vue({
                 ],
             },
             {
-                name:'Giulia',
+                name:'Arianna',
                 avatar:'img/avatar_io.jpg',
                 visible: true,
                 title: 'avatar_io',
@@ -199,9 +199,7 @@ var app = new Vue({
         time: '',
         newMex: '',
         inputSearch: '',
-        messageActive:{
-            index: false
-        },
+        messageActive: 'indefinita',
         newMexFinal: {
             date: '',
             text: '',
@@ -243,13 +241,16 @@ var app = new Vue({
             });
         },
         showOption(index){
-            this.messageActive.index = index;
+            if(index == this.messageActive){
+                this.messageActive = 'indefinita';
+            }
+            else{
+                this.messageActive = index;
+            }
         },
         deleteMsg(index){
             this.contacts[this.chatAttuale].messages.splice(index,1);
-            if(!this.contacts[this.chatAttuale].messages.length){
-                this.contacts.splice(this.chatAttuale, 1)
-            }
+
         }
     }
 });
